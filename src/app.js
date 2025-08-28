@@ -11,12 +11,14 @@ const excuseElement = document.querySelector('#DomainGen')
 const Pronouns = ['the', 'our'];
 const Adjs = ['great', 'big'];
 const Nouns = ['jogger', 'racoon'];
+const Extensions = [".com", ".net", ".us", ".io"]
 const NewSentences = [];
 
 for (let pronoun of Pronouns){
   for (let adj of Adjs){
     for (let noun of Nouns){
-      NewSentences.push(`${pronoun}${adj}${noun}`);
+      for (let extension of Extensions)
+      NewSentences.push(`${pronoun}${adj}${noun}${extension}`);
     }
   }
 }
